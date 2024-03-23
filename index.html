@@ -47,6 +47,8 @@
       const searchBtn = document.querySelector(".search button");
       const weatherIcon = document.querySelector(".weather-icon");
 
+      let audio = null;
+
       async function checkWeather(city) {
         const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
         if (response.status == 404) {
@@ -80,7 +82,12 @@
       }
 
       function playMusic() {
-        let audio = new Audio("eba.mp3");
+        if (audio && !audio.paused) {
+          audio.pause();
+          audio.currentTime = 0;
+        }
+
+        audio = new Audio("eba.mp3");
         audio.play();
       }
 
