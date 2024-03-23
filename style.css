@@ -68,7 +68,7 @@ body {
   margin-top: -10px;
 }
 
-.details{
+.details {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -76,30 +76,28 @@ body {
   margin-top: 50px;
 }
 
-.col{
+.col {
   display: flex;
   align-items: center;
   text-align: left;
-
 }
 
-.col img{
+.col img {
   width: 40px;
   margin-right: 10px;
-
 }
 
-.humidity, .wind{
+.humidity,
+.wind {
   font-size: 28px;
   margin-top: -6px;
 }
 
-.weather{
+.weather {
   display: none;
-
 }
 
-.error{
+.error {
   text-align: center;
   margin-left: 10px;
   font-size: 114px;
@@ -107,3 +105,38 @@ body {
   display: none;
   font-weight: 800;
 }
+
+@media screen and (max-width: 466px) {
+  .card {
+    max-width: 470px;
+    padding: 40px 10px;
+  }
+  .search input {
+    padding: 10px 15px;
+    width: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+  }
+}
+
+
+@media screen and (max-width: 340px) {
+  .card {
+    max-width: 470px;
+    padding: 40px 10px;
+  }
+  .search input {
+    padding: 10px 15px;
+    width: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+  }
+  .error {
+    font-size: 100px;
+  }
+}
+
